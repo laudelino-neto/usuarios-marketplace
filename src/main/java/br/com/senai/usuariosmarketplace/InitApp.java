@@ -6,7 +6,7 @@ public class InitApp {
 
 	public static void main(String[] args) {
 		ManagerDb.getInstance().getConexao();
-		System.out.println("Conectou ao banco");
+		System.out.println("Conectou");
 	}
 
 }
