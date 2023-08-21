@@ -1,2 +1,4 @@
 src/main/resources/application.properties
 target/
+.classpath
+.settings/org.eclipse.jdt.core.prefs
