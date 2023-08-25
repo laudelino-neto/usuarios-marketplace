@@ -70,6 +70,15 @@ public class UsuarioService {
 		
 	}
 	
+	public Usuario buscarPor(String login) {
+		Preconditions.checkArgument(!Strings.isNullOrEmpty(login), 
+				"O login é obrigatório");
+		Usuario usuarioEncontrado = dao.buscarPor(login);
+		Preconditions.checkNotNull(usuarioEncontrado, 
+				"Não foi encontrado usuário vinculado ao login informado");
+		return usuarioEncontrado;
+	}
+	
 	private String removerAcentoDo(String nomeCompleto) {
 		return Normalizer.normalize(nomeCompleto, 
 				Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
